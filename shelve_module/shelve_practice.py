@@ -3,6 +3,7 @@ import shutil
 import os.path
 import os
 import glob
+import sys
 from pathlib import Path
 
 data = {"name": "John", "age": 30, "email": "john@example.com"}
@@ -28,10 +29,3 @@ files = os.listdir(script_dir)
 files_2 = glob.glob(os.path.join(script_dir, "*.txt")) # finds all txt files in the directory and prints the route
 
 p = Path(".")
-
-if __name__ == "__main__":
-    print(files) # shelve_quiz.txt, shelve_practice.py
-    print(files_2) # automate.py/shelve_module/shelve_quiz.txt'
-    for file in p.iterdir():
-        if file.is_file():
-            print(file.name)
